@@ -65,8 +65,8 @@ const LinkCard = ({urlData, fetchUrls}) => {
           {urlData?.title}
         </span>
         <span className="text-2xl text-blue-500 font-bold  hover:underline cursor-pointer">
-           {`${import.meta.env.VITE_URL}`
-          {urlData?.custom_url ? urlData?.custom_url : urlData?.short_url}}
+           {`${import.meta.env.VITE_URL}${link}`}
+{/*           {urlData?.custom_url ? urlData?.custom_url : urlData?.short_url}} */}
         </span>
         <span className="flex items-center gap-1 hover:underline cursor-pointer">
           {urlData?.original_url}
