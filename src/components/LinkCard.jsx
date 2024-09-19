@@ -13,6 +13,11 @@ const LinkCard = ({urlData, fetchUrls}) => {
     urlData?.id
   );
 
+    let link = "";
+    if (url) {
+        link = url?.custom_url ? url?.custom_url : url.short_url;
+    }
+
   //  .... toast
   const notify = () =>
     toast.success("Clipboard express: your link's there!", {
@@ -65,10 +70,7 @@ const LinkCard = ({urlData, fetchUrls}) => {
           {urlData?.title}
         </span>
 
-          let link = "";
-          if (url) {
-              link = url?.custom_url ? url?.custom_url : url.short_url;
-            }
+       
         <span className="text-2xl text-blue-500 font-bold  hover:underline cursor-pointer">
            {`${import.meta.env.VITE_URL}${link}`}
 {/*           {urlData?.custom_url ? urlData?.custom_url : urlData?.short_url}} */}
