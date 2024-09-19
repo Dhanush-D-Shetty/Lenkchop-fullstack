@@ -14,7 +14,7 @@ const LinkCard = ({urlData, fetchUrls}) => {
   );
 
     let link = "";
-    if (url) {
+    if (urlData) {
         link = urlData?.custom_url ? urlData?.custom_url : urlData.short_url;
     }
 
